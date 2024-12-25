@@ -1,0 +1,334 @@
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Start main container style */
+.mainContainer {
+    width: 100vw;
+    flex-direction: column;
+}
+
+/* End main container style */
+
+/* Start navbar style */
+.navbar {
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #4A90E2;
+    padding: 1rem;
+    position: fixed;
+    top: 0
+}
+
+.navbarLogo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.navbarLogo img {
+    height: 100%;
+}
+
+.navbarLogo h2 {
+    color: #FFFFFF;
+    font-style: italic;
+    font-size: 1.5rem;
+}
+
+.navbarMenu {
+    color: #FFFFFF;
+    gap: 1rem;
+    font-size: 1rem;
+}
+
+.navbarLink a:link,
+.navbarLink a:visited {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.navbarLink a:hover {
+    color: #FF6F61;
+}
+
+/* End navbar style */
+
+/* Start new flat form style */
+.newFlatForm {
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #F8F8F8;
+    box-shadow: 2px 4px 15px #FF6F61;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    position: absolute;
+    top: 6rem;
+    z-index: -1;
+}
+
+.newFlatMainDiv {
+    width: 100%;
+    flex-direction: column;
+    padding-left: 1rem;
+}
+
+.newFlatDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.newFlatDiv p {
+    width: 12rem;
+    text-align: left;
+}
+
+.newFlatDiv input,
+.flatAdTitle {
+    border: 1px solid #FF6F61;
+    border-radius: 0.5rem;
+    width: 20rem;
+    height: 2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.flatAdTitle {
+    resize: none;
+    height: 2.5rem;
+}
+
+.error {
+    color: #A9A9A9;
+    font-size: 0.85rem;
+    margin: 0;
+    text-align: left;
+    width: 100%;
+    height: auto;
+}
+
+.submitButton {
+    background-color: #4A90E2;
+    color: #FFFFFF;
+    height: 2.5rem;
+    width: 50%;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: all 0.5s;
+    cursor: pointer;
+    box-shadow: 2px 4px 5px #FF6F61;
+    margin-bottom: 1rem;
+}
+
+.submitButtonHoverEffects {
+    background-color: #FF6F61;
+    opacity: 0.8;
+    transform: scale(1.2);
+}
+
+.checkboxDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding-left: 1rem;
+}
+
+.newFlatCheckboxDiv {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.newFlatCheckboxDiv p {
+    margin: 0;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.newFlatCheckboxDiv input[type="checkbox"] {
+    height: 1.2rem;
+    width: 1.2rem;
+    vertical-align: middle;
+
+}
+
+/* End new flat form style */
+
+/* Start Media Query max width 1250px */
+@media (max-width:1250px) {
+    .newFlatForm {
+        width: 50vw;
+    }
+}
+
+/* End Media Query max width 1250px */
+
+/* Start Media Query max width 1050px */
+
+@media (max-width:1050px) {
+
+    .navbarLogo {
+        width: 50%;
+    }
+
+    .newFlatForm {
+        width: 55vw;
+    }
+
+    .newFlatDiv input,
+    .flatAdTitle {
+        width: 15rem;
+    }
+
+    .newFlatCheckboxDiv {
+        width: 25rem;
+    }
+}
+
+/* End Media Query max width 1050px */
+
+/* Start Media Query max width 850px */
+@media (max-width:850px) {
+
+    * {
+        font-size: 100%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+        height: 8rem;
+    }
+
+    .navbarLogo {
+        width: unset;
+    }
+
+    .navbarLogo img {
+        height: 3rem;
+    }
+
+    .navbarMenu {
+        height: 2rem;
+    }
+
+    .newFlatForm {
+        width: 100%;
+        top: 8rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    .newFlatMainDiv {
+        padding-left: 0rem;
+    }
+
+    .checkboxDiv {
+        justify-content: flex-start;
+        margin-bottom: 0rem;
+        padding-left: 0;
+    }
+
+    .newFlatCheckboxDiv p {
+        width: 4.5rem;
+    }
+
+    .newFlatCheckboxDiv input[type="checkbox"] {
+        height: 0.85rem;
+    }
+
+    .newFlatDiv {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .newFlatDiv p,
+    .newFlatDiv input,
+    .flatAdTitle {
+        width: 100%;
+    }
+
+    .newFlatDiv p {
+        font-size: 0.85rem;
+        height: 1rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .flatAdTitle {
+        height: 2.5rem;
+    }
+
+    .flatAC {
+        height: 1rem;
+    }
+
+    .error {
+        width: 100%;
+        text-align: left;
+        padding-bottom: 0rem;
+    }
+
+    .submitButton {
+        width: 80%;
+        height: 2.5rem;
+    }
+}
+
+/* End Media Query max width 850px */
+
+/* Start Media Query max width 550px */
+@media (max-width:550px) {
+    * {
+        font-size: 95%;
+    }
+
+    .navbar {
+        height: 9rem;
+    }
+
+    .newFlatForm {
+        border-radius: 0;
+        top: 9rem;
+    }
+
+    .navbarLogo h2 {
+        font-size: 1rem;
+    }
+
+    .flatAdTitle {
+        height: 2rem;
+        padding-top: 0;
+    }
+
+    .submitButton {
+        font-size: 0.85rem;
+        height: 2rem;
+    }
+}
+
+/* End Media Query max width 550px */

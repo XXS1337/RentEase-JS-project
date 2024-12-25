@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Viorel Stefan" />
+    <link rel="icon" href="../images/logo/icon.png" type="image/gif" sizes="24x24">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+
+<body class="flex">
+
+    <!-- Start main container -->
+    <div class="mainContainer">
+
+        <!-- Start header -->
+        <div class="header">
+            <img src="../images/logo/logo-no-background.png" alt="">
+            <h2> Unlock the Door to Your Dream Flat!</h2>
+        </div>
+        <!-- End header -->
+
+        <!-- Start title -->
+        <div class="title">
+            <h3>Login</h3>
+        </div>
+        <!-- End title -->
+
+        <!-- Start login form -->
+        <form class="loginForm">
+
+            <div class="loginFormDiv flex">
+                <p>Email *: </p>
+                <input type="email" class="email" name="email" placeholder="Enter your email" required>
+                <p class="error emailError"></p>
+            </div>
+
+            <div class="loginFormDiv flex">
+                <p>Password *: </p>
+                <input type="password" class="password" name="password" placeholder="Enter your password" required>
+                <p class="error passwordError"></p>
+            </div>
+
+
+            <div class="loginFormAsterisk flex">* All fields are required.</div>
+
+            <button type="submit" class="submitButton">Sign In</button>
+        </form>
+        <!-- End login form -->
+
+        <!-- Start redirect section -->
+        <div class="redirect flex">
+            <p>Forgot password?</p>
+            <a href="../passwordReset/passwordReset.html">Reset password</a>
+        </div>
+
+        <div class="redirect flex">
+            <p>Don't have an account?</p>
+            <a href="../register/register.html">Register</a>
+        </div>
+        <!-- End redirect section -->
+    </div>
+    <!-- End main container -->
+
+    <script src="login.js"></script>
+</body>
+
+</html>

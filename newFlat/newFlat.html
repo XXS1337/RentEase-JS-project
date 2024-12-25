@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Viorel Stefan" />
+  <link rel="icon" href="../images/logo/icon.png" type="image/gif" sizes="24x24">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>Add new flats</title>
+  <link rel="stylesheet" href="newFlat.css">
+</head>
+
+<body class="flex">
+
+  <!-- Start main container -->
+  <div class="mainContainer flex">
+
+    <!-- Start navbar -->
+    <div class="navbar">
+
+      <div class="navbarLogo">
+        <img src="../images/logo/logo-no-background.png" alt>
+        <h2> Unlock the Door to Your Dream Flat!</h2>
+      </div>
+
+      <div class="navbarMenu flex">
+        <div class="navbarLink">
+          <a class="navbarGreeting" href="../userManagement/userManagement.html"></a>
+        </div>
+        <div class="navbarLink">
+          <a href="../homepage/homepage.html">Homepage</a>
+        </div>
+        <div class="navbarLink">
+          <a href="../allFlats/allFlats.html">All flats</a>
+        </div>
+        <div class="navbarLink">
+          <a class="navbarLogout" href="../login/login.html">Logout</a>
+        </div>
+      </div>
+    </div>
+    <!-- End navbar -->
+
+    <!-- Start new flat form -->
+    <form class="newFlatForm">
+      <h3>New flat info:</h3>
+
+      <div class="newFlatMainDiv flex">
+        <div class="newFlatDiv">
+          <p>Ad title: *</p>
+          <textarea class="flatAdTitle" name="flatAdTitle" maxlength="60" placeholder="Ad title (5-60 characters)" required></textarea>
+        </div>
+        <div class="error flatAdTitleError"></div>
+      </div>
+
+      <div class="newFlatMainDiv flex">
+        <div class="newFlatDiv">
+          <p>City: *</p>
+          <input type="text" class="flatCity" name="flatCity" placeholder="City" required>
+        </div>
+        <div class="error flatCityError"></div>
+      </div>
+
+      <div class="newFlatMainDiv flex">
+        <div class="newFlatDiv">
+          <p>Street name: *</p>
+          <input type="text" class="flatStreetName" name="flatStreetName" placeholder="Street name" required>
+        </div>
+        <div class="error flatStreetNameError"></div>
+      </div>
+
+      <div class="newFlatMainDiv flex">
+        <div class="newFlatDiv">
+          <p>Street number: *</p>
+          <input type="text" class="flatStreetNumber" name="flatStreetNumber" placeholder="Street number" required>
+        </div>
+        <div class="error flatStreetNumberError"></div>
+      </div>
+
+      <div class="newFlatMainDiv flex">
+        <div class="newFlatDiv">
+          <p>Area size (m²): *</p>
+          <input type="number" class="flatAreaSize" name="flatAreaSize" placeholder="Area size (m²)" required>
+        </div>
+        <div class="error flatAreaSizeError"></div>
+      </div>
+
+      <div class="checkboxDiv">
+        <div class="newFlatCheckboxDiv">
+          <p>Has AC?:</p>
+          <input type="checkbox" class="flatAC" name="flatAC">
+        </div>
+      </div>
+
+      <div class="newFlatMainDiv flex">
+        <div class="newFlatDiv">
+          <p>Year Built: *</p>
+          <input type="number" class="flatYearBuilt" name="flatYearBuilt" placeholder="Year built" required>
+        </div>
+        <div class="error flatYearBuiltError"></div>
+      </div>
+
+      <div class="newFlatMainDiv flex">
+        <div class="newFlatDiv">
+          <p>Rent price (€): *</p>
+          <input type="number" class="flatRentPrice" name="flatRentPrice" placeholder="Rent price (€)" required>
+        </div>
+        <div class="error flatRentPriceError"></div>
+      </div>
+
+      <div class="newFlatMainDiv flex">
+        <div class="newFlatDiv">
+          <p>Date available: *</p>
+          <input type="date" class="flatDateAvailable" name="flatDateAvailable" required>
+        </div>
+        <div class="error flatDateAvailableError"></div>
+      </div>
+
+      <div class="newFlatMainDiv flex">
+        <div class="newFlatDiv">
+          <p>Select a picture of the flat: *</p>
+          <input type="file" class="flatImage" name="flatImage" accept="image/*">
+        </div>
+        <div class="error flatImageError"></div>
+      </div>
+
+      <div class="flex">* All fields are required.</div>
+      <button type="submit" class="submitButton">Add new flat</button>
+    </form>
+    <!-- End new flat form -->
+
+  </div>
+  <!-- End main container -->
+
+  <script src="newFlat.js"></script>
+</body>
+
+</html>

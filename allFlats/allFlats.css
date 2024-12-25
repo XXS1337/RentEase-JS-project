@@ -1,0 +1,468 @@
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Start main container style */
+.mainContainer {
+    width: 100vw;
+    flex-direction: column;
+}
+
+/* End main container style */
+
+/* Start navbar style */
+.navbar {
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #4A90E2;
+    padding: 1rem;
+    position: fixed;
+    top: 0
+}
+
+.navbarLogo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.navbarLogo img {
+    height: 100%;
+}
+
+.navbarLogo h2 {
+    color: #FFFFFF;
+    font-style: italic;
+    font-size: 1.5rem;
+}
+
+.navbarMenu {
+    color: #FFFFFF;
+    gap: 1rem;
+    font-size: 1rem;
+}
+
+.navbarLink a:link,
+.navbarLink a:visited {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.navbarLink a:hover {
+    color: #FF6F61;
+}
+
+/* End navbar style */
+
+/* Start filter container style */
+.filterContainer {
+    max-width: 100vw;
+    width: 100%;
+    height: 3rem;
+    position: fixed;
+    top: 6rem;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #A9A9A9;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 2rem;
+    background-color: #F8F8F8;
+}
+
+
+.filterCategory {
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.filterCategory input {
+    border: 1px solid #FF6F61;
+    border-radius: 0.5rem;
+    width: 8rem;
+    height: 2rem;
+    padding-left: 0.5rem;
+}
+
+.filterButton,
+.resetFilterButton {
+    background-color: #4A90E2;
+    color: #FFFFFF;
+    height: 2rem;
+    width: 6.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: all 0.5s;
+    cursor: pointer;
+    box-shadow: 2px 4px 5px #FF6F61;
+}
+
+.buttonHoverEffects {
+    background-color: #FF6F61;
+    opacity: 0.8;
+    transform: scale(1.2);
+}
+
+/* End filter container style */
+
+/* Start sort container style */
+.sortContainer {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 9rem;
+    gap: 2rem;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #A9A9A9;
+    background-color: #F8F8F8;
+}
+
+.sortDropdownDiv {
+    width: 100%;
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.sortDropdownDiv label {
+    background-color: #4A90E2;
+    color: #FFFFFF;
+    height: 2rem;
+    width: 6.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    box-shadow: 2px 4px 5px #FF6F61;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sortOptions {
+    width: 13rem;
+    padding: 0 1rem;
+    height: 2rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    background-color: #F8F8F8;
+    appearance: none;
+    cursor: pointer;
+}
+
+.sortOptions:hover {
+    border-color: #FF6F61;
+    background-color: #F8F8F8;
+}
+
+/* End sort container style */
+
+/* Start filtered flats container style */
+.sortedFlatsContainer {
+    max-width: 100vw;
+    width: 100%;
+    padding: 2rem;
+    background-color: #F8F8F8;
+    box-shadow: 2px 4px 15px #FF6F61;
+    position: absolute;
+    top: 12rem;
+    z-index: -1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 35rem);
+    justify-content: space-evenly;
+    gap: 2rem;
+}
+
+.sortedFlatsDiv {
+    width: 100%;
+    max-width: 100vw;
+    /* Hard coded to maximum length (3 linie chars title, 2 lines city name, 2 lines street name */
+    height: 20rem;
+    display: flex;
+    gap: 1rem;
+    background-color: #FAF0E6;
+    border-radius: 0.2rem;
+    box-shadow: 2px 4px 15px #FF6F61;
+    overflow: hidden;
+    font-size: 0.85rem;
+    transition: all 0.5s;
+}
+
+.sortedFlatsDiv:hover {
+    transform: scale(1.05);
+}
+
+.flatPictureDiv {
+    width: 50%;
+}
+
+.flatPicture {
+    width: 100%;
+    height: 100%;
+}
+
+.flatDetailsDiv {
+    width: 50%;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    height: 100%;
+    position: relative;
+}
+
+.flatDetailsDiv p {
+    padding-bottom: 0.25rem;
+}
+
+h3 {
+    padding-bottom: 0.5rem;
+    overflow-wrap: break-word;
+    word-break: auto;
+}
+
+.toggleFavoriteButton {
+    background-color: #4A90E2;
+    color: #FFFFFF;
+    height: 1.5rem;
+    width: fit-content;
+    padding: 0 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.85rem;
+    transition: all 0.5s;
+    cursor: pointer;
+    box-shadow: 2px 4px 5px #FF6F61;
+    position: absolute;
+    bottom: 1rem;
+    left: 0rem;
+}
+
+.deleteFlatButton {
+    background-color: #4A90E2;
+    color: #FFFFFF;
+    height: 1.5rem;
+    width: fit-content;
+    padding: 0 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.85rem;
+    transition: all 0.5s;
+    cursor: pointer;
+    box-shadow: 2px 4px 5px #FF6F61;
+    position: absolute;
+    bottom: 1rem;
+    left: 9rem;
+}
+
+.toggleFavoriteButton:hover,
+.deleteFlatButton:hover {
+    background-color: #FF6F61;
+    opacity: 0.8;
+    transform: scale(1.1);
+}
+
+/* End filtered flats container style */
+
+/* Start Media Query max width 1350px */
+@media (max-width:1350px) {
+    .filterContainer {
+        height: 8rem;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(2, auto);
+        gap: 1rem
+    }
+
+    .sortContainer {
+        top: 14rem;
+    }
+
+    .sortedFlatsContainer {
+        top: 17rem;
+        grid-template-columns: repeat(auto-fill, 31rem);
+    }
+}
+
+/* End Media Query max width 1350px */
+
+/* Start Media Query max width 1050px */
+@media (max-width:1050px) {
+    .navbarLogo {
+        width: 50%;
+    }
+}
+
+/* End Media Query max width 1050px */
+
+/* Start Media Query max width 850px */
+@media (max-width:850px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+        height: 8rem;
+    }
+
+    .navbarLogo img {
+        height: 3rem;
+    }
+
+    .navbarLogo {
+        width: unset;
+    }
+
+    .navbarMenu {
+        height: 2rem;
+    }
+
+    .filterContainer {
+        top: 8rem;
+        height: 13rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem
+    }
+
+    .sortContainer {
+        top: 21rem;
+    }
+
+    .sortedFlatsContainer {
+        top: 24rem;
+        padding: 1rem;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+
+    .sortedFlatsDiv {
+        flex-direction: column;
+        height: fit-content;
+        position: static;
+        padding-top: 0;
+    }
+
+    .sortedFlatsDiv:hover {
+        transform: none;
+    }
+
+    .flatPictureDiv {
+        width: 100%;
+    }
+
+    .flatDetailsDiv {
+        width: 100%;
+        padding-top: 0;
+        padding-left: 1rem;
+    }
+
+    .toggleFavoriteButton {
+        position: static;
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .deleteFlatButton {
+        left: 10rem;
+    }
+}
+
+/* End Media Query max width 850px */
+
+/* Start Media Query max width 570px */
+@media (max-width:550px) {
+    * {
+        font-size: 95%;
+    }
+
+    .navbar {
+        height: 9rem;
+    }
+
+    .filterContainer {
+        top: 9rem;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .sortContainer {
+        top: 22rem;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .filterButton,
+    .resetFilterButton,
+    .sortDropdownDiv label,
+    .sortOptions {
+        font-size: 0.85rem;
+    }
+
+    .sortedFlatsContainer {
+        top: 26rem;
+        gap: 0;
+        padding: 0;
+    }
+
+    .sortedFlatsDiv {
+        border-radius: 0;
+        border-bottom: 1px solid #A9A9A9;
+        padding: 0;
+    }
+
+    .flatDetailsDiv {
+        padding: 0 0.5rem;
+    }
+}
+
+/* End Media Query max width 570px */
+
+/* Start Media Query max width 350px */
+@media (max-width:350px) {
+    * {
+        font-size: 95%;
+    }
+
+    .navbar {
+        height: 11rem;
+    }
+
+    .filterContainer {
+        top: 11rem;
+        height: 24rem;
+    }
+
+    .sortContainer {
+        top: 35rem;
+        height: 6rem;
+    }
+
+    .sortedFlatsContainer {
+        top: 42rem;
+    }
+
+    .filterCategory:nth-child(2),
+    .filterCategory:nth-child(3),
+    .filterCategory:last-child,
+    .sortDropdownDiv {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+}
+
+/* End Media Query max width 350px */
+/* Works until max width ~280px */

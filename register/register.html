@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Viorel Stefan" />
+    <link rel="icon" href="../images/logo/icon.png" type="image/gif" sizes="24x24">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Register</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+
+<body class="flex">
+
+    <!-- Start main container -->
+    <div class="mainContainer">
+
+        <!-- Start header -->
+        <div class="header">
+            <img src="../images/logo/logo-no-background.png" alt="">
+            <h2> Unlock the Door to Your Dream Flat!</h2>
+        </div>
+        <!-- End header -->
+
+        <!-- Start title -->
+        <div class="welcome">
+            <h3>Welcome, sign up for free</h3>
+            <p>Creating an account allows you to access your saved and contacted properties on any device.</p>
+        </div>
+        <!-- End title -->
+
+        <!-- Start register form -->
+        <form class="registerForm">
+            <div class="registerFormMainDiv flex">
+                <div class="registerFormDiv flex">
+                    <p>First Name *: </p>
+                    <input type="text" class="firstName" name="firstName" placeholder="Enter your first name" required>
+                </div>
+                <div class="error firstNameError"></div>
+            </div>
+
+            <div class=" registerFormMainDiv flex">
+                <div class="registerFormDiv flex">
+                    <p>Last Name *: </p>
+                    <input type="text" class="lastName" name="lastName" placeholder="Enter your last name" required>
+                </div>
+                <div class="error lastNameError"></div>
+            </div>
+
+            <div class="registerFormMainDiv flex">
+                <div class="registerFormDiv flex">
+                    <p>Email *: </p>
+                    <input type="email" class="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="error emailError"></div>
+            </div>
+
+            <div class="registerFormMainDiv flex">
+                <div class="registerFormDiv flex">
+                    <p>Password *: </p>
+                    <input type="password" class="password" name="password" placeholder="Enter your password" required>
+                </div>
+                <div class="error passwordError"></div>
+            </div>
+
+            <div class="registerFormMainDiv flex">
+                <div class="registerFormDiv flex">
+                    <p>Confirm Password *: </p>
+                    <input type="password" class="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+                </div>
+                <div class="error confirmPasswordError"></div>
+            </div>
+
+            <div class="registerFormMainDiv flex">
+                <div class="registerFormDiv flex">
+                    <p>Birth Date *: </p>
+                    <input type="date" class="birthDate" name="birthDate" required>
+                </div>
+                <div class="error birthDateError"></div>
+            </div>
+
+            <div class="registerFormAsterisk flex">* All fields are required.</div>
+
+            <button type="submit" class="submitButton">Create Account</button>
+        </form>
+        <!-- End register form -->
+
+        <!-- Start redirect section -->
+        <div class="redirect flex">
+            <p>Already have an account?</p>
+            <a href="../login/login.html">Log in</a>
+        </div>
+        <!-- End redirect section -->
+
+    </div>
+    <!-- End main container -->
+
+    <script src="register.js"></script>
+</body>
+
+</html>

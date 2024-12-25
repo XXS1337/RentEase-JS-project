@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Viorel Stefan" />
+    <link rel="icon" href="../images/logo/icon.png" type="image/gif" sizes="24x24">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>All flats</title>
+    <link rel="stylesheet" href="allFlats.css">
+</head>
+
+<body class="flex">
+
+    <!-- Start main container -->
+    <div class="mainContainer flex">
+
+        <!-- Start navbar -->
+        <div class="navbar">
+
+            <div class="navbarLogo">
+                <img src="../images/logo/logo-no-background.png" alt="">
+                <h2> Unlock the Door to Your Dream Flat!</h2>
+            </div>
+
+            <div class="navbarMenu flex">
+                <div class="navbarLink">
+                    <a class="navbarGreeting" href="../userManagement/userManagement.html"></a>
+                </div>
+                <div class="navbarLink">
+                    <a href="../homepage/homepage.html">Homepage</a>
+                </div>
+                <div class="navbarLink">
+                    <a href="../newFlat/newFlat.html">New flat</a>
+                </div>
+                <div class="navbarLink">
+                    <a class="navbarLogout" href="../login/login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+        <!-- End navbar -->
+
+        <!-- Start filter container -->
+        <div class="filterContainer">
+            <div class="filterCategory">
+                <button type="submit" class="filterButton">Filter</button>
+                <button type="submit" class="resetFilterButton">Reset filters</button>
+            </div>
+
+            <div class="filterCategory">
+                <div>City</div>
+                <input type="text" class="filterCityInput" name="filterCityInput" placeholder="City">
+            </div>
+            <div class="filterCategory">
+                <div>Price range:</div>
+                <input type="number" class="filterMinPrice" name="filterMinPrice" placeholder="Min price ($)">
+                <input type="number" class="filterMaxPrice" name="filterMaxPrice" placeholder="Max price ($)">
+            </div>
+            <div class="filterCategory">
+                <div>Flat area size:</div>
+                <input type="number" class="filterMinArea" name="filterMinArea" placeholder="Min area (sq.ft.)">
+                <input type="number" class="filterMaxArea" name="filterMaxArea" placeholder="Max area (sq.ft.)">
+            </div>
+        </div>
+        <!-- End filter container -->
+
+        <!-- Start sort container -->
+        <div class="sortContainer">
+            <div class="sortDropdownDiv">
+                <label for="sortOptions" name="sortOptionsLabel">Sort by: </label>
+                <select class="sortOptions" class="sortOptions" name="sortOptionsSelector">
+                    <option value="" name="noSort" selected>No sort</option>
+                    <option value="cityAsc" name="cityAsc">City (A-Z)</option>
+                    <option value="cityDesc" name="cityDesc">City (Z-A)</option>
+                    <option value="priceAsc" name="priceAsc">Price ascending</option>
+                    <option value="priceDesc" name="priceDesc">Price descending</option>
+                    <option value="areaAsc" name="areaAsc">Area size ascending</option>
+                    <option value="areaDesc" name="areaDesc">Area size descending</option>
+                </select>
+            </div>
+        </div>
+        <!-- End sort container -->
+
+        <!-- Start filtered flats container -->
+        <div class="sortedFlatsContainer"></div>
+        <!-- End filtered flats container -->
+
+    </div>
+    <!-- End main container -->
+
+    <script src="allFlats.js"></script>
+</body>
+
+</html>
